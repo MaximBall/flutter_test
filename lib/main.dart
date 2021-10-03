@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:hello_flutter/pages/page_hex.dart';
 import 'dart:math';
 
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.indigo,
       ),
-      home: const App(title: 'HelloFlutter'),
+      home: const RGBscreen(title: 'HelloFlutter'),
     );
   
   }
@@ -38,11 +39,19 @@ class App extends StatefulWidget {
 
 class _MyAppState extends State<App> {
 
-  Color _color = Color.fromRGBO(1, 1, 1, 1.0);
+  final _random = Random();
+  final double _oppacity = 1;
+
+  Color _color = Colors.orangeAccent;
 
   void generateColor(){
     setState(() {
-      _color = Color((Random().nextDouble() * 0xFFFFFF).toInt() << 0).withOpacity(1.0);
+      _color = Color.fromRGBO(
+        _random.nextInt(256), 
+        _random.nextInt(256), 
+        _random.nextInt(256), 
+        _oppacity,
+        );
     });
   }
 
