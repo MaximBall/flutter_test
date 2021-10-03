@@ -1,6 +1,16 @@
-# hello_flutter
+# flutter_solid_test
 
 A new Flutter project.
+
+## What is?
+
+This test application has two pages.
+
+The home page provides an option on touching the screen to generate a random background color using RGB.
+
+The second page has a special AnimatedContainer widget to move the container and fade in a randomly generated color.
+Color is generated as HEX.
+
 
 ## Getting Started
 
